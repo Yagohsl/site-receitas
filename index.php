@@ -19,7 +19,7 @@ $receitas = $stmt->fetchAll();
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Stardew Receitas</a>
+    <a class="navbar-brand" href="index.php">Stardew Receitas</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,8 +42,8 @@ $receitas = $stmt->fetchAll();
 
       </ul>
       <form class="d-flex" role="search" method="get">
-        <input class="form-control me-2" type="search" placeholder="Buscar por nome" aria-label="Search" name="busca"/>
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
+        <input class="form-control me-2 buscar" type="search" placeholder="Buscar por nome" aria-label="Search" name="busca"/>
+        <button class="buscar btn-buscar" type="submit">Buscar</button>
       </form>
     </div>
   </div>
@@ -55,11 +55,14 @@ $receitas = $stmt->fetchAll();
   <div class="receitas">
     <?php foreach ($receitas as $r): ?>
       <div class="receita">
-        <h3><?= htmlspecialchars($r['nome']) ?></h3>
-        <img src="data:image/jpeg;base64,<?= base64_encode($r['imagem']) ?>" alt="Imagem da receita">
-        <p><strong>Categoria:</strong> <?= $r['categoria'] ?></p>
-        <p><strong>Ingredientes:</strong> <?= nl2br($r['ingredientes']) ?></p>
-        <p><strong>Modo de Preparo:</strong> <?= nl2br($r['modo_de_preparo']) ?></p>
+        <h3 class="title-receita"><?= htmlspecialchars($r['nome']) ?></h3>
+        <img src="data:image/jpeg;base64,<?= base64_encode($r['imagem']) ?>" alt="Imagem da receita" class="img-receita">
+        <p class="cont-receita">
+          <strong>Categoria</strong> 
+          <br>
+          <?= $r['categoria'] ?></p>
+        <p class="cont-receita"><strong>Ingredientes</strong><br> <?= nl2br($r['ingredientes']) ?></p>
+        <p class="cont-receita"><strong>Modo de Preparo</strong><br> <?= nl2br($r['modo_de_preparo']) ?></p>
       </div>
     <?php endforeach; ?>
   </div>

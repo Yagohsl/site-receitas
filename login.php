@@ -46,18 +46,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
   <?php if (!empty($erro)) echo "<p style='color:red;'>$erro</p>"; ?>
 <form method="post" class="login">
-  <h1>Login Administrativo</h1>
+  <h1 class="title-painel">Login Administrativo</h1>
   <br><br>
   <div class="mb-3">
-    <label for="Email1" class="form-label">E-mail</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"name="email" placeholder="lelerubbles@hotmail.com" required>
+    <label for="Email1" class="form-label label-painel">E-mail</label>
+    <input type="email" class="form-control input-painel" id="exampleInputEmail1" aria-describedby="emailHelp"name="email" placeholder="danieldazl@hotmail.com" required>
 
   <div class="mb-3">
-    <label for="Password" class="form-label">Senha</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Digite sua senha" required>
+    <label for="Password" class="form-label label-painel">Senha</label>
+    <input type="password" class="form-control input-painel" id="exampleInputPassword1" name="senha" placeholder="Digite sua senha" required>
   </div>
 
-  <button type="submit" class="btn btn-primary">Entrar</button>
+  <button type="submit" class="buscar btn-buscar">Entrar</button>
 </form>
 
  
