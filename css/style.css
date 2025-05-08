@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'StardewFont';
+  src: url('../fonts/StardewValley.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'StardewFont', sans-serif;
+  color: #333;
+    padding: 0% 5% 0 5%;    
+    background-image: url('../images/wallpape_stardew-valley-hd-no-virus.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center; 
+    margin: 0; 
+  }
+  nav{
+    margin: 0 -5% 0 -5%;
+    background: linear-gradient(to bottom, #ffcb7b, #edab65);
+    border: solid #b85203;
+    font-family: 'StardewFont', sans-serif;
+    font-size: 2rem;
+    }
+  /*cor clara fac06e
+  cor escura #eca660*/
+  
+  .receitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20%;
+  }
+  
+  .receita {
+    background-color: #fff3b0;
+    border: 2px solid #e07a5f;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .receita img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .img-index{
+    width:30%;
+    display: block;
+    margin: 0 auto;
+    padding-top:5%
+    
+  }
+
+  
+
+  /*Estilo Login.php*/
+
+  .login, .painel-receita{
+    padding:6% 15% 
+  }
